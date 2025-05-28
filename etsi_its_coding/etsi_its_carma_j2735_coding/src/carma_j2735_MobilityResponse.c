@@ -9,8 +9,8 @@
 
 asn_TYPE_member_t asn_MBR_carma_j2735_MobilityResponse_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct carma_j2735_MobilityResponse, urgency),
-		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_carma_j2735_MobilityUrgency,
 		0,
 		{
@@ -29,8 +29,8 @@ asn_TYPE_member_t asn_MBR_carma_j2735_MobilityResponse_1[] = {
 		"urgency"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct carma_j2735_MobilityResponse, isAccepted),
-		(ASN_TAG_CLASS_UNIVERSAL | (1 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_carma_j2735_MobilityResponseFlag,
 		0,
 		{
@@ -53,8 +53,8 @@ static const ber_tlv_tag_t asn_DEF_carma_j2735_MobilityResponse_tags_1[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_carma_j2735_MobilityResponse_tag2el_1[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (1 << 2)), 1, 0, 0 }, /* isAccepted */
-    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 } /* urgency */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* urgency */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 } /* isAccepted */
 };
 asn_SEQUENCE_specifics_t asn_SPC_carma_j2735_MobilityResponse_specs_1 = {
 	sizeof(struct carma_j2735_MobilityResponse),

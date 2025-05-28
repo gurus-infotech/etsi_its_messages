@@ -1,4 +1,4 @@
-TestMessage01 DEFINITIONS ::= BEGIN
+TestMessage01 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 TestMessage01 ::= SEQUENCE {
    -- TestMessage01 is only for MobilityResponse message
    header    MobilityHeader,

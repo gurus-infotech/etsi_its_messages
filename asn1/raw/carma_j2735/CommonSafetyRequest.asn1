@@ -1,4 +1,4 @@
-CommonSafetyRequest DEFINITIONS ::= BEGIN
+CommonSafetyRequest DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 CommonSafetyRequest ::= SEQUENCE {
    timeStamp   MinuteOfTheYear             OPTIONAL,
    msgCnt      MsgCount                    OPTIONAL, 

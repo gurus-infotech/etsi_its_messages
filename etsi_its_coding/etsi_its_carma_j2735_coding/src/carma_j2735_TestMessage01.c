@@ -9,8 +9,8 @@
 
 static asn_TYPE_member_t asn_MBR_carma_j2735_TestMessage01_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct carma_j2735_TestMessage01, header),
-		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_carma_j2735_MobilityHeader,
 		0,
 		{
@@ -29,8 +29,8 @@ static asn_TYPE_member_t asn_MBR_carma_j2735_TestMessage01_1[] = {
 		"header"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct carma_j2735_TestMessage01, body),
-		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
-		0,
+		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
+		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_carma_j2735_MobilityResponse,
 		0,
 		{
@@ -53,8 +53,8 @@ static const ber_tlv_tag_t asn_DEF_carma_j2735_TestMessage01_tags_1[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_carma_j2735_TestMessage01_tag2el_1[] = {
-    { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 0, 0, 1 }, /* header */
-    { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 1, -1, 0 } /* body */
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* header */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 } /* body */
 };
 static asn_SEQUENCE_specifics_t asn_SPC_carma_j2735_TestMessage01_specs_1 = {
 	sizeof(struct carma_j2735_TestMessage01),
