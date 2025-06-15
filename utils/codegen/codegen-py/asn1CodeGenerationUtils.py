@@ -71,18 +71,37 @@ def extractAsn1ClassesFromDocs(asn1_docs: List[str]) -> Dict[str, Dict]:
 
 def parseAsn1Files(asn1_files: List[str]) -> Tuple[List[Dict], Dict[str, str]]:
     """Parse ASN.1 files and return a list of dictionaries and raw ASN.1 definitions."""
+    print("\nDebug: Starting ASN.1 file parsing...")
     asn1_docs = []
     asn1_raw = {}
+    
     for asn1_file in asn1_files:
+        print(f"\nDebug: Processing file: {asn1_file}")
+        
         with open(asn1_file, 'r', encoding='utf-8') as f:
             content = f.read()
+            print(f"Debug: File content length: {len(content)} characters")
+            
             # Extract type definitions
-            type_matches = re.finditer(r"([A-Z][a-zA-Z0-9]+ ::= [^\n]*?::=[\s\S]*?)(?=(^[A-Z][a-zA-Z0-9]+ ::=)|$)", content, re.MULTILINE)
+            type_matches = re.finditer(r"([A-Z][a-zA-Z0-9]+ ::= [^\n]*?::=[\s\S]*?)(?=(^[A-Z][a-zA-Z0-9]+ ::=)|$)", 
+                                     content, re.MULTILINE)
+            
+            match_count = 0
             for match in type_matches:
                 type_def = match.group(1).strip()
                 type_name = type_def.split(" ::= ")[0].strip()
+                
+                print(f"Debug: Found type: {type_name}")
+                print(f"Debug: Definition length: {len(type_def)} characters")
+                
                 asn1_raw[type_name] = type_def
-                asn1_docs.append({type_name: {"name": type_name, "type": "RAW"}})  # Simplified for demonstration
+                asn1_docs.append({type_name: {"name": type_name, "type": "RAW"}})
+                match_count += 1
+            
+            print(f"Debug: Total types found in file: {match_count}")
+
+    print(f"\nDebug: Parsing complete. Total files processed: {len(asn1_files)}")
+    print(f"Debug: Total types extracted: {len(asn1_docs)}")
 
     return asn1_docs, asn1_raw
 
