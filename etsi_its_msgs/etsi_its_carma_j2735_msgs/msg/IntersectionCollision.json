@@ -1,0 +1,18 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "IntersectionCollision",
+    "description": "ASN.1  converted to JSON Schema",
+    
+    "asn1Definition": "IntersectionCollision    ::= SEQUENCE { ... }",
+    
+    
+    "type": "object",
+    "properties": {
+        
+    },
+    "required": [
+        
+    ],
+    "unevaluatedProperties": false
+    
+}

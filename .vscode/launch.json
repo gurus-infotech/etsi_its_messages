@@ -39,7 +39,7 @@
             "request": "launch",
             "program": "utils/codegen/codegen-py/asn1ToJsonSchema.py",
             "args": [
-                "asn1/raw/carma_j2735/TestMessage01.asn",
+                "asn1/raw/carma_j2735/MessageFrame.asn",
                 "-t",
                 "carma_j2735",
                 "-o",
